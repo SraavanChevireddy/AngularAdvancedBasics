@@ -41,7 +41,7 @@
                             <img *ngIf='showImage' src={{product.artworkUrl100}} class="rounded float-start" alt="artworkUrl100">
                             
                         </td> 
-                        <td>{{product.artistName | uppercase}}</td>
+                        <td>{{product.artistName | uppercase | convert_to_spaces:'-'}}</td>
                         <td>{{product.id | currency}}</td>
                         <td>{{product.releaseDate}}</td> 
                         <td>{{product.name | lowercase}}</td>
