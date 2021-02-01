@@ -1,0 +1,59 @@
+<div class="card">
+    <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="card-header">
+            <h3 class="display-3"><i class="fab fa-behance"></i>  {{pageTitle}}</h3>
+            <h6 class="display6">Get Started  <span class="badge bg-secondary && display-3">New</span></h6>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">Filter by:</div>
+                    <div class="col-md-2">
+                        <input class="display-6" type="text"  [(ngModel)] = 'filterQuery'>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="display4">Filtered by: {{filterQuery}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-md & card-header">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <th>
+                        <button type="button" class="btn btn-primary" (click)='toggleImage()'> 
+                            {{showImage ? 'Hide' : 'Show'}} Image
+                        </button>
+                    </th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Content Rating</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of productsList'>
+                        <!-- For Image -->
+                        <td>
+                            <img *ngIf='showImage' src={{product.artworkUrl100}} class="rounded float-start" alt="artworkUrl100">
+                            
+                        </td> 
+                        <td>{{product.artistName | uppercase}}</td>
+                        <td>{{product.id | currency}}</td>
+                        <td>{{product.releaseDate}}</td> 
+                        <td>{{product.name | lowercase}}</td>
+                        <td>{{product.contentAdvisoryRating}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+
+
+
+</div>
