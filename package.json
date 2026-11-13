@@ -23,7 +23,7 @@
     "bootstrap": "^4.6.0",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
+    "tslib": "^2.9.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
